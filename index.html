@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="shoes" src="https://i.ibb.co/W0YCpZj/TENIS-1.png">
+            <div class="card-content">
+                <p>Nike</p>
+                <h2>Epic React <br> Flyknit 2</h2>
+                <h3>R$ <span>359,00</span></h3>
+            </div>
+            <div class="actions-container">
+                <p>Cores:</p>
+                <input type="radio" name="color" id="verde" >
+                <label for="verde">
+                    <i class="verde" data-feather="check-circle"></i>
+                </label>
+                <input type="radio" name="color" id="vermelho" >
+                <label for="vermelho">
+                    <i class="vermelho" data-feather="check-circle"></i>
+                </label>
+                <input type="radio" name="color" id="azul" >
+                <label for="azul">
+                    <i class="azul" data-feather="check-circle"></i>
+                </label>
+            </div>
+            <div class="size-options">
+                <p>Tamanhos:</p>
+                <p class="squade">37</p>
+                <p class="squade">38</p>
+                <p class="squade">39</p>
+                <p class="squade">40</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
