@@ -63,13 +63,16 @@ h3{
     cursor: pointer;
     transform: scale(1.1);
 }
-.actions-container svg.verde{
+.actions-container svg:first-child{
     background-color: #85D848;
     color: #85D848;
 }
 .actions-container svg.vermelho{
     background-color: #FF3838;
     color: #FF3838;
+}
+.active{
+    background-color: white !important;
 }
 .actions-container svg.azul{
     background-color: #3864FF;
