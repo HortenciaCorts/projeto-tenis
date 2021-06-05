@@ -1,20 +1,50 @@
-let form = document.querySelector('form');
-let cor = document.querySelectorAll('svg');
+let formColors = document.querySelector('.form-colors');
+let svgColor = document.querySelectorAll('svg');
+let formSizes = document.querySelector('.form-sizes');
+let labelSize = document.querySelectorAll('.size');
+let selectCor;
 
-form.addEventListener("click", selectColor);
+formColors.addEventListener("click", selectColor);
+formSizes.addEventListener("click", selectSize);
 
 function selectColor(){
-    if(form[0].checked){
-        cor[0].classList.add('active');
-        cor[1].classList.remove('active');
-        cor[2].classList.remove('active');
-    }else if(form[1].checked){
-        cor[1].classList.add('active');
-        cor[0].classList.remove('active');
-        cor[2].classList.remove('active');
-    }else if(form[2].checked){
-        cor[2].classList.add('active');
-        cor[0].classList.remove('active');
-        cor[1].classList.remove('active');
+    if(formColors[0].checked){
+        svgColor[0].classList.add('active');
+        svgColor[1].classList.remove('active');
+        svgColor[2].classList.remove('active');
+        selectCor = 'green';
+        selectSize();
+    }else if(formColors[1].checked){
+        svgColor[1].classList.add('active');
+        svgColor[0].classList.remove('active');
+        svgColor[2].classList.remove('active');
+        selectCor = 'red';
+        selectSize();
+    }else if(formColors[2].checked){
+        svgColor[2].classList.add('active');
+        svgColor[0].classList.remove('active');
+        svgColor[1].classList.remove('active');
+        selectCor = 'blue';
+        selectSize();
     }
+}
+
+function selectSize(){
+    for(let i=0; i < formSizes.length; i++){
+        if(formSizes[i].checked){
+            if(selectCor === 'green'){
+                labelSize[i].classList.toggle('sizes-green');
+                labelSize[i].classList.remove('sizes-red');
+                labelSize[i].classList.remove('sizes-blue');
+            }else if(selectCor === 'red'){
+                labelSize[i].classList.toggle('sizes-red');
+                labelSize[i].classList.remove('sizes-green');
+                labelSize[i].classList.remove('sizes-blue');
+            }else if(selectCor === 'blue'){
+                labelSize[i].classList.toggle('sizes-blue');
+                labelSize[i].classList.remove('sizes-green');
+                labelSize[i].classList.remove('sizes-red');
+            }
+        }
+    }    
 }

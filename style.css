@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-p{
+p, label{
     font-family: 'Monteserrat';
     font-style: normal;
     font-weight: 600;
@@ -63,7 +63,7 @@ h3{
     cursor: pointer;
     transform: scale(1.1);
 }
-.actions-container svg:first-child{
+.actions-container svg.verde{
     background-color: #85D848;
     color: #85D848;
 }
@@ -71,12 +71,12 @@ h3{
     background-color: #FF3838;
     color: #FF3838;
 }
-.active{
-    background-color: white !important;
-}
 .actions-container svg.azul{
     background-color: #3864FF;
     color: #3864FF;
+}
+.active{
+    background-color: white !important;
 }
 input[type="radio"]{
     display: none;
@@ -84,14 +84,24 @@ input[type="radio"]{
 .size-options p{
     margin-bottom: .5rem;
 }
-.size-options p.squade:hover{
-    cursor: pointer;
-    border: 1px solid black;
-    color: black;
-}
-.size-options p.squade{
+.form-sizes label{
     display: inline;
     text-align: center;
     padding: .2rem;
     border-radius: 4px;
+}
+.size-options label:hover{
+    cursor: pointer;
+}
+.sizes-green{
+    color: white;
+    background-color: #85D848;
+}
+.sizes-red{
+    color: white;
+    background-color: #FF3838;
+}
+.sizes-blue{
+    color: white;
+    background-color: #3864FF;
 }
