@@ -1,5 +1,8 @@
+feather.replace();
+
 let formColors = document.querySelector('.form-colors');
 let svgColor = document.querySelectorAll('svg');
+
 let formSizes = document.querySelector('.form-sizes');
 let labelSize = document.querySelectorAll('.size');
 let selectCor;

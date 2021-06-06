@@ -21,6 +21,9 @@ h2{
 h3{
     font-family: 'Open Sans';
 }
+input[type="radio"]{
+    display: none;
+}
 .container{
     background-color: rgb(243, 243, 243);
 
@@ -31,7 +34,7 @@ h3{
     align-items: center;
     justify-content: center;
 }
-.container .card{
+.card{
     background-color: white;
     width: 263px;
     height: 386px;
@@ -55,31 +58,28 @@ h3{
     color: black;
     font-size: 1.5em;
 }
-.actions-container svg{
+.color-options svg{
     border-radius: 50%;
     margin: .5rem 1rem .5rem 0;
 }
-.actions-container svg:hover{
+.color-options svg:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
-.actions-container svg.verde{
+.color-options svg.verde{
     background-color: #85D848;
     color: #85D848;
 }
-.actions-container svg.vermelho{
+.color-options svg.vermelho{
     background-color: #FF3838;
     color: #FF3838;
 }
-.actions-container svg.azul{
+.color-options svg.azul{
     background-color: #3864FF;
     color: #3864FF;
 }
 .active{
     background-color: white !important;
-}
-input[type="radio"]{
-    display: none;
 }
 .size-options p{
     margin-bottom: .5rem;
@@ -90,7 +90,7 @@ input[type="radio"]{
     padding: .2rem;
     border-radius: 4px;
 }
-.size-options label:hover{
+.form-sizes label:hover{
     cursor: pointer;
 }
 .sizes-green{
@@ -104,4 +104,33 @@ input[type="radio"]{
 .sizes-blue{
     color: white;
     background-color: #3864FF;
+}
+.actions-container{
+    display: flex;
+}
+.shoes-options{
+    flex-grow: 1;
+}
+.cart-button{   
+    width: 60px;
+    margin-right: 1.2rem;
+
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+.cart-button button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #85D848;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+.cart-button button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
