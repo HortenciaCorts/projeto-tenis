@@ -7,14 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/feather-icons"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
+        <div class="modal-overlay">
+            <div class="modal">
+                <a href="#">
+                    <i data-feather="x-circle"></i>
+                </a>
+                <p class="menssage"></p>
+                <button class="modal-button"></button>
+            </div>
+        </div>
         <div class="card">
-            <img class="shoes" src="https://i.ibb.co/W0YCpZj/TENIS-1.png">
+            <img class="shoes" src="./img/TENIS-300.png">
             <div class="card-content">
                 <p>Nike</p>
                 <h2>Epic React <br> Flyknit 2</h2>
@@ -27,15 +35,15 @@
                         <form class="form-colors" action="">
                             <input type="radio" name="color" id="verde">
                             <label for="verde">
-                                <i class="verde" data-feather="check-circle"></i>
+                                <i class="green" data-feather="check-circle"></i>
                             </label>
                             <input type="radio" name="color" id="vermelho">
                             <label for="vermelho">
-                                <i class="vermelho" data-feather="check-circle"></i>
+                                <i class="red" data-feather="check-circle"></i>
                             </label>
                             <input type="radio" name="color" id="azul">
                             <label for="azul">
-                                <i class="azul" data-feather="check-circle"></i>
+                                <i class="blue" data-feather="check-circle"></i>
                             </label>
                         </form>
                     </div>
@@ -53,8 +61,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="cart-button">
-                    <button>
+                <div class="cart">
+                    <button class="cart-button">
                         <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M10.59 0.294937L6 4.87494L1.41 0.294937L0 1.70494L6 7.70494L12 1.70494L10.59 0.294937Z"

@@ -1,18 +1,11 @@
+/* FONTES */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
-
+/* GLOBAL */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-p, label{
-    font-family: 'Monteserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    color: #808080;
 }
 h2{
     font-family: 'Open Sans';
@@ -21,9 +14,21 @@ h2{
 h3{
     font-family: 'Open Sans';
 }
+p, label{
+    font-family: 'Monteserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #808080;
+}
 input[type="radio"]{
     display: none;
 }
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+/* CONTAINER */
 .container{
     background-color: rgb(243, 243, 243);
 
@@ -34,6 +39,7 @@ input[type="radio"]{
     align-items: center;
     justify-content: center;
 }
+/* CARD */
 .card{
     background-color: white;
     width: 263px;
@@ -42,12 +48,9 @@ input[type="radio"]{
     padding: 6.5rem 0 1rem 1.5rem;
     border-radius: 16px 50px 16px 16px;
     box-shadow: 0px 4px 42px rgba(0, 0, 0, .25);
-    position: relative;
 }
 .card img{
-    position: absolute;
-    top: -200px;
-    right: -150px;
+    margin-top: -350px;
 }
 .card-content h3{
     text-align: right;
@@ -58,6 +61,7 @@ input[type="radio"]{
     color: black;
     font-size: 1.5em;
 }
+/* CORES */
 .color-options svg{
     border-radius: 50%;
     margin: .5rem 1rem .5rem 0;
@@ -66,21 +70,22 @@ input[type="radio"]{
     cursor: pointer;
     transform: scale(1.1);
 }
-.color-options svg.verde{
+.color-options svg.green{
     background-color: #85D848;
     color: #85D848;
 }
-.color-options svg.vermelho{
+.color-options svg.red{
     background-color: #FF3838;
     color: #FF3838;
 }
-.color-options svg.azul{
+.color-options svg.blue{
     background-color: #3864FF;
     color: #3864FF;
 }
-.active{
+.color-active{
     background-color: white !important;
 }
+/* TAMANHOS */
 .size-options p{
     margin-bottom: .5rem;
 }
@@ -108,10 +113,12 @@ input[type="radio"]{
 .actions-container{
     display: flex;
 }
+/* DIVIDINDO OPÇÕES COM CARRINHO */
 .shoes-options{
     flex-grow: 1;
 }
-.cart-button{   
+/* CARRINHA */
+.cart{   
     width: 60px;
     margin-right: 1.2rem;
 
@@ -119,7 +126,7 @@ input[type="radio"]{
     align-items: center;
     justify-content: center;
 }
-.cart-button button{
+.cart button{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,7 +137,46 @@ input[type="radio"]{
     border-radius: 8px;
     padding: 0.5rem;
 }
-.cart-button button:hover{
-    cursor: pointer;
-    transform: scale(1.1);
+/* MODAL */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.modal-overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal{
+    width: 263px;
+    background-color: #f0f2f5;
+    
+    margin-top: 35px;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+.modal svg{    
+    position: fixed;
+    margin-top: -1.2rem;
+    margin-left: 13rem;
+    color: #696969;
+    width: 20px;
+}
+.modal button{
+    display: flex;
+    margin: auto;
+    margin-top: .5rem;
+    padding: .4rem .8rem;
+
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #85D848;
 }
